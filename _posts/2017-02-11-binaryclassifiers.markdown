@@ -445,7 +445,7 @@ Thế nhưng, có những loại dữ liệu _linearly separable_ mà chỉ mộ
 
 * Hình 4b): one-vs-rest không phù hợp vì class màu xanh lục và class _rest_ (hợp của xanh lam và đỏ) là không _linearly separable_. Lúc này, one-vs-one hoặc hierarchical phù hợp hơn. 
 
-* Hình 4c): Tương tự như trên, ba class lam, lục, đỏ thẳng hàng nên sẽ không dùng được one-vs-rét. one-vs-one vẫn làm việc vì từng đôi class một là _linearly separable_. Tương tự hierarchical cũng làm việc nếu ta phân chia các nhóm một cách hợp lý. Hoặc chúng ta có thể kết hợp nhiều phương pháp. Ví dụ: dùng one-vs-rest để tìm _đỏ_ vs _không đỏ_. Nếu một điểm dữ liệu là _không đỏ_, với 3 class còn lại, chúng ta lại quay lại trường hợp Hình 4a) và có thể dùng các phương pháp khác. Nhưng khó khăn vẫn nằm ở việc phân nhóm như thế nào, liệu rằng những class nào có thể cho vào cùng một nhóm? Với những dữ liệu đơn giản, [K-means clustering](/2017/01/01/kmeans/) có thể là một giải pháp!
+* Hình 4c): Tương tự như trên, ba class lam, lục, đỏ thẳng hàng nên sẽ không dùng được one-vs-rest. one-vs-one vẫn làm việc vì từng đôi class một là _linearly separable_. Tương tự hierarchical cũng làm việc nếu ta phân chia các nhóm một cách hợp lý. Hoặc chúng ta có thể kết hợp nhiều phương pháp. Ví dụ: dùng one-vs-rest để tìm _đỏ_ vs _không đỏ_. Nếu một điểm dữ liệu là _không đỏ_, với 3 class còn lại, chúng ta lại quay lại trường hợp Hình 4a) và có thể dùng các phương pháp khác. Nhưng khó khăn vẫn nằm ở việc phân nhóm như thế nào, liệu rằng những class nào có thể cho vào cùng một nhóm? Với những dữ liệu đơn giản, [K-means clustering](/2017/01/01/kmeans/) có thể là một giải pháp!
 
 Bạn đọc có thể xem thêm ví dụ áp dụng Logistic Regression cho cơ sở dữ liệu [Iris](/2017/01/08/knn/#bo-co-so-du-lieu-iris-iris-flower-dataset) trong [link này](http://scikit-learn.org/stable/auto_examples/linear_model/plot_iris_logistic.html)
 <a name="-thao-luan"></a>
@@ -468,7 +468,7 @@ Lấy ví dụ với bài toán có 4 classes 1, 2, 3, 4; ta có thể biểu di
 <div class = "thecap">Hình 6: Mô hình neural networks cho các phương pháp đề cập trong bài</div>
 </div> 
 
-Lúc này, thay vì chỉ có 1 node output như [các phương pháp tôi đề cập trước đây](/2017/01/27/logisticregression/#-thao-luan) (Linear Regression, Perceptron Learning Algorithm, Logistic Regression), chúng ta thấy rằng các networks này đều có nhiều outputs. Và một vector trọng số \\(\mathbf{w}\\) bây giờ đã trở thành _ma trận trọng số_ \\(\mathbf{W}\\) mà mỗi cột của nó tương ứng với vector trọng số của một node output. Việc tối ưu đồng thời các binary classifiers trong mỗi network cũng được tổng quát lên nhớ các phép tính với ma trận. 
+Lúc này, thay vì chỉ có 1 node output như [các phương pháp tôi đề cập trước đây](/2017/01/27/logisticregression/#-thao-luan) (Linear Regression, Perceptron Learning Algorithm, Logistic Regression), chúng ta thấy rằng các networks này đều có nhiều outputs. Và một vector trọng số \\(\mathbf{w}\\) bây giờ đã trở thành _ma trận trọng số_ \\(\mathbf{W}\\) mà mỗi cột của nó tương ứng với vector trọng số của một node output. Việc tối ưu đồng thời các binary classifiers trong mỗi network cũng được tổng quát lên nhờ các phép tính với ma trận. 
 
 Lấy ví dụ với công thức cập nhật của [logistic sigmoid regression ](/2017/01/27/logisticregression/#cong-thuc-cap-nhat-cho-logistic-sigmoid-regression):
 
